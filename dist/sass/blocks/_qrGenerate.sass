@@ -1,0 +1,83 @@
+.qrgenerate
+	margin-top: 120px
+	display: flex
+	height: 280px
+	&-gen
+		display: block
+		&__title
+			font-size: 1.125em
+			line-height: 16px
+
+			+SemiBold
+		&__input
+			padding: 5px
+			width: 100%
+			margin-top: 10px
+			padding: 5px 5px 50px
+
+			background: $white
+			border: 2px solid $blue
+			border-radius: 4px
+			align-items: center
+			&:focus
+				border: 2px solid $blue
+				box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25)
+		&__button
+			border: 1px solid $dark
+			margin-top: 40px
+		.btn 
+			padding: 14px 18px
+			border-radius: 4px
+			line-height: 18px
+			font-size: 0.875em
+
+			border: 2px solid $white
+			background-color: $blue
+			cursor: pointer
+			color: $white
+			transition: 0.2s all
+			+Regular
+			&:hover
+				background-color: $white
+				color: $dark 
+				border: 1px solid $dark
+	&-result
+		&__title
+			font-size: 1.125em
+			line-height: 16px
+
+			+SemiBold
+		&__image
+			margin-top: 10px
+
+// Adaptive navbar MAX-WIDTH 1199px
+@media screen and (max-width: 1199px) 
+
+
+// Adaptive navbar MAX-WIDTH 991px
+@media screen and (max-width: 991px) 
+	.qrgenerate
+		margin-top: 180px
+		height: 300px
+
+// Adaptive navbar MAX-WIDTH 769px
+@media screen and (max-width: 769px)
+
+
+// Adaptive navbar MAX-WIDTH 540px
+@media screen and (max-width: 575px)
+	.qrgenerate
+		margin-top: 100px
+		height: 420px
+		&-result
+			margin-top: 40px
+			&__title
+				font-size: 1.125em
+				line-height: 16px
+
+				+SemiBold
+			&__image
+				margin-top: 10px
+
+// Adaptive navbar MAX-WIDTH 381px
+@media screen and (max-width: 359px)

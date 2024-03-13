@@ -1,0 +1,241 @@
+footer
+    background-color: $hero-bg
+    border-top: 4px solid #59595A
+    box-sizing: border-box
+    height: 300px
+    margin-top: 80px
+    .scroll-up
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 45px
+        img
+            box-shadow: 0px 3px 4px 2px rgba(255, 255, 255, 0.25)
+            border-radius: 100%
+            cursor: pointer
+            transition: 0.2s
+            &:hover
+                box-shadow: 0px 5px 6px 4px rgba(255, 255, 255, 0.25)
+    .logo
+        &__main
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            margin-top: 10px
+        &__image
+            float: right
+            align-items: center
+        &__title
+            font-size: 1.5em
+            line-height: 29px
+            display: flex
+            color: $white
+            +SemiBold
+        &__text
+            font-size: 0.75em
+            line-height: 15px
+            text-align: center
+            color: $white
+            +Light_Italick
+    nav
+        margin-top: 52px
+        h1
+            color: $white
+            font-size: 0.875em
+            line-height: 17px
+            +SemiBold
+            margin-bottom: 20px
+        li
+            margin-bottom: 15px
+            a
+                font-size: 0.75em
+                line-height: 15px
+                color: $grey
+                transition: 0.5s
+                &:hover
+                    text-decoration-line: underline
+                    color: #ACB7C1
+    .contacts
+        margin-top: 87px
+        margin: 87px 40px 0px
+    .programs
+        margin-left: 30px
+    .email
+        margin-left: 60px
+        margin-top: 52px
+        &__text
+            font-size: 0.75em
+            line-height: 100%
+            display: flex
+            align-items: center
+            color: $grey
+            margin-bottom: 8px
+            +Regular
+        &__input
+            width: 380px
+            height: 40px
+
+            background: #3E3E3E
+            color: $grey
+            font-size: 0.875em
+            text-align: center
+            border-radius: 7px
+            cursor: pointer
+        &__btn
+            background: $red
+            border-radius: 7px
+            margin-top: 5px
+            padding: 10px 143px
+            font-size: 0.875em
+            color: $white
+            cursor: pointer
+            +Regular
+        &__subtext
+            font-size: 0.75em
+            color: $white
+            line-height: 15px
+            display: flex
+            align-items: flex-end
+            +Light_Italick
+            a 
+                margin-top: 5px
+                text-decoration-line: underline
+                color: $white
+                font-style: normal
+    .subfooter
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 50px
+        &__items
+            margin-left: 15px
+            margin-right: 15px
+            width: 32px
+            height: 32px
+
+
+// Adaptive navbar MAX-WIDTH 1199px
+@media screen and (max-width: 1199px) 
+    footer
+        .programs
+            margin-left: 0px
+            &__title
+                font-size: 0.775em
+            &__title
+                font-size: 0.775em
+        nav
+            li 
+                a 
+                    font-size: 0.6875em
+        .email
+            margin-left: 30px
+            &__text
+                font-size: 0.6875em
+            &__input
+                width: 310px
+                height: 40px
+                font-size: 0.8125em
+            &__btn
+                padding: 10px 110px
+                font-size: 0.8125em
+            &__subtext
+                font-size: 0.6875em
+
+
+// Adaptive navbar MAX-WIDTH 991px
+@media screen and (max-width: 991px) 
+    footer
+        height: 620px
+        .scroll-up
+            margin-top: 30px
+        .logo
+            &__title
+                font-size: 1.5em
+                +Bold
+            &__text
+                font-size: 0.75em
+        .programs
+            width: 200px
+            margin-left: 20px
+            // margin-top: 20px
+            &__title
+                font-size: 0.8750em
+        .contacts
+            // margin-top: 55px
+            width: 200px
+            margin-left: 40px
+        .accaunt
+            // margin-top: 20px
+            width: 200px
+            &__title
+                font-size: 0.8750em
+        .email
+            margin: 30px 0px 0px
+            width: 100%
+            &__text
+                font-size: 0.750em
+            &__input
+                width: 100%
+                font-size: 0.8750em
+            &__btn
+                padding: 10px 298px
+                font-size: 0.8750em
+            &__subtext
+                font-size: 0.750em
+        nav
+            li
+                a 
+                    font-size: 0.8125em
+
+
+// Adaptive navbar MAX-WIDTH 769px
+@media screen and (max-width: 769px)
+    footer 
+        .accaunt
+            margin-left: 100px
+        .contacts
+            display: none
+        .email
+            &__btn
+                padding: 10px 208px
+
+// Adaptive navbar MAX-WIDTH 540px
+@media screen and (max-width: 576px)
+    footer 
+        height: 630px
+        .programs
+            width: 150px
+        .accaunt
+            width: 150px
+        .email
+            &__btn
+                width: 100%
+                padding: 10px
+                text-align: center
+
+
+
+// Adaptive navbar MAX-WIDTH 381px
+@media screen and (max-width: 480px)
+    footer 
+        height: 650px
+        .email
+            // display: none
+            width: 100%
+            &__btn
+                width: 100%
+
+
+@media screen and (max-width: 419px)
+    footer 
+        height: 650px
+        .programs
+            width: 100%
+        .accaunt
+            margin-left: 20px
+        .email
+            &__btn
+                width: 100%
+                padding: 10px
+                text-align: center

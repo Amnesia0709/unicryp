@@ -1,0 +1,97 @@
+html 
+	overflow-x: hidden
+.hashed
+	display: flex
+	margin-top: 80px
+	height: 310px
+	&-result
+		background-color: $white 
+		box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.25)
+		height: 50px
+		border-radius: 4px
+		// border: 1px solid $blue
+		display: flex
+		align-items: center
+		span
+			padding: 0px 10px
+	&-setting
+		margin-top: 20px
+		&__title
+			font-size: 1.125em
+			line-height: 18px
+			color: $dark
+			+SemiBold
+		&__input
+			padding: 5px
+			width: 100%
+			margin-top: 10px
+			padding: 15px 10px 15px
+			// margin-top: 10px
+
+			background: $white
+			// border: 1px solid $blue
+			box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.25)
+			border-radius: 4px
+			align-items: center
+			&:focus
+				// border: 1px solid $blue
+				box-shadow: -1px 5px 7px rgba(0, 0, 0, 0.25)
+		&-menu
+			border-radius: 4px
+			background-color: $white 
+			border: 1px solid $blue
+			width: 200px
+			height: 35px
+			margin-top: 20px
+			&:focus
+				border: 1px solid $blue
+			&__items
+				font-size: 1em
+		&_button
+			margin-top: 50px
+			&__copy
+				margin-left: 10px
+	.btn
+		padding: 14px 18px
+		border-radius: 4px
+		line-height: 18px
+		font-size: 0.875em
+
+		border: 2px solid $white
+		background-color: $blue
+		cursor: pointer
+		color: $white
+		transition: 0.2s all
+		+Regular
+		&:hover
+			background-color: $white
+			color: $dark 
+			border: 2px solid $dark
+
+
+// Adaptive navbar MAX-WIDTH 1199px
+@media screen and (max-width: 1199px) 
+
+
+// Adaptive navbar MAX-WIDTH 991px
+@media screen and (max-width: 991px) 
+
+
+// Adaptive navbar MAX-WIDTH 769px
+@media screen and (max-width: 769px)
+	.hashed
+		overflow-x:hidden
+		&-setting
+			width: 100%
+			fieldset
+				margin-left: 20px
+
+
+
+
+// Adaptive navbar MAX-WIDTH 540px
+@media screen and (max-width: 540px)
+
+
+// Adaptive navbar MAX-WIDTH 381px
+@media screen and (max-width: 359px)

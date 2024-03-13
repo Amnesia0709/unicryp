@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>UniCryp</title>
+
+    <!-- Connect crypto.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <!-- Connect jQuer v3.6.0-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://use.fontawesome.com/e7727969df.js"></script>
+    <!-- Connect Style.css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Reset Css-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Connect bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!-- Fonts Montserrat-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,300&amp;display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="everything-header">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="logo"> <img src="image/logo.svg" alt="alt">
+                <h1 class="logo__title">UniCryp<br><span class="logo__text">мы заботимся о вашей безопасности</span></h1>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="reg_auth">
+                <button class="sign" onclick="alert('Извиняемся вход и регистрация временно не доступны')">Войти</button>
+                <button class="reg reg_active" onclick="alert('Извиняемся вход и регистрация временно не доступны')">Регистрация</button></div>
+              </div>
+
+              <!-- Slider -->
+              <div class="slider">
+                <menu>
+                  <img class="slider__button" src="image/slide.svg" alt="slide" onclick="sliderout()">
+                  <div id="slider-menu" class="slider-menu">
+                    <div class="slider-menu-active_info">
+                      <h1 class="slider-menu-active_info_title">DOCS</h1>
+                      <li class="slider-menu-active__items">
+                        <a href="#">Главная</a>
+                      </li>
+                      <li class="slider-menu-active__items">
+                        <a href="#">Контакты</a>
+                      </li>
+                      <li class="slider-menu-active__items">
+                        <a href="#">О нас</a>
+                      </li>
+                    </div>
+                    <div class="slider-menus-active_programs">
+                      <h1 class="slider-menu-active_programs_title">Программы</h1>
+                      <li class="slider-menu-active__items">
+                        <a href="/">Генерация пароля</a>
+                      </li>
+                      <li class="slider-menu-active__items">
+                        <a href="qrcodeGenerate.html">Генерация QR-code</a>
+                      </li>
+                      <li class="slider-menu-active__items">
+                        <a href="/hashText.html">Хеширование пароля</a>
+                      </li>
+                    </div>
+                  </div>
+                  <script>
+                    function sliderout() {
+                      let elem = document.querySelector('#slider-menu');
+                      elem.classList.toggle('slider-menu-active');
+                    }
+                  </script>
+                </menu>
+              </div>
+              <!-- Sliderout -->
+
+            </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="container"> 
+          <div class="row">
+            <div class="col">
+              <div class="hideMenu">
+                <a class="hideMenu__items" href="/">Генерация пароля </a>
+                <a class="hideMenu__items" href="qrcodeGenerate.html">Генерация QR-code</a>
+                <a class="hideMenu__items" href="hashText.html">Хеширование пароля</a>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="info">
+                <!-- <a class="info__items" href="#">Главная</a> -->
+                <a class="info__items" href="#">Контакты</a>
+                <a class="info__items" href="#">О нас</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hashed Text -->
+    <section class="hashed">
+      <div class="container">
+        <div class="hashed-result">
+          <span id="hash-result"></span>
+        </div>
+        <div class="hashed-setting">
+          <div class="row">
+            <div class="col hashed-setting">
+              <h1 class="hashed-setting__title">Введите текст:</h1>
+              <input type="text" id="hashed-text" class="hashed-setting__input" placeholder="test" value='unicryp'>
+            </div>
+            <div class="col-xs-5 hashed-setting">
+              <fieldset>
+                <legend class="hashed-setting__title">Выберите метод хеширования:</legend>
+                <select id="hash" class="hashed-setting-menu" aria-label="hash" size="1">
+                  <option class="hashed-setting-menu__items" value="SHA1">SHA1</option>
+                  <option class="hashed-setting-menu__items" value="SHA256">SHA256</option>
+                  <option class="hashed-setting-menu__items" value="SHA512">SHA512</option>
+                  <option class="hashed-setting-menu__items" value="MD5">MD5</option>
+                </select> 
+              </fieldset> 
+            </div>
+          </div>
+          <div class="hashed-setting_button">
+            <button class="btn hashed-setting_button__hashed" onclick="hashing()">Хешировать</button>
+            <button class="btn hashed-setting_button__copy" onclick="copytext('#hash-result')">Скопировать</button>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Hashed Text -->
+    <!-- Footer -->
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="row"> 
+          <div class="col-lg-3"> 
+            <div class="scroll-up"><img src="image/scroll-up.svg" alt="scroll-up"></div>
+            <div class="logo"> 
+              <div class="row logo__main"><img class="logo__image" src="image/logo.svg" alt="logo">
+                <h1 class="logo__title">UniCryp </h1>
+              </div>
+              <p class="logo__text">мы заботимся о вашей<br> безопасности</p>
+            </div>
+          </div>
+          <div class="col-xs-2"> 
+            <nav class="programs"> 
+              <h1 class="programs__title">Программы</h1>
+              <li class="programs__items"><a href="#">Генерация пароля</a></li>
+              <li class="programs__items"> <a href="#">Генерация QR-code</a></li>
+              <li class="programs__items"><a href="#">Хеширование пароля</a></li>
+            </nav>
+          </div>
+          <div class="col-xs-1"> 
+            <nav class="contacts"> 
+              <li><a href="#">Главная</a></li>
+              <li> <a href="#">Контакты</a></li>
+              <li><a href="#">О нас</a></li>
+            </nav>
+          </div>
+          <div class="col-xs-2">
+            <nav class="accaunt">
+              <h1 class="accaunt__title">Аккаунты</h1>
+              <li class="accaunt__items"><a href="#">Войти</a></li>
+              <li class="accaunt__items"><a href="#">Регистрация</a></li>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <form action="">
+              <div class="email" id="email">
+                <p class="email__text">Хотите получать уведомления о самых свежих обновлениях и новостях</p>
+                <input class="email__input" id ="email__input" type="text" placeholder="E-mail">
+                <button class="btn email__btn">Подписаться</button>
+                <p class= "email__subtext">По всем вопросам: <a href="">help@unicryp.com</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container"> 
+        <div class="subfooter"> 
+          <a href="#"><img class="subfooter__items" src="image/logo-vk.svg" alt="vk"></a>
+          <a href="#"><img class="subfooter__items" src="image/logo-inst.svg" alt="inst"></a>
+          <a href="#"><img class="subfooter__items" src="image/logo-tw.svg" alt="tw"></a>
+          <a href="#"><img class="subfooter__items" src="image/logo-fc.svg" alt="fc"></a>
+          <a href="#"><img class="subfooter__items" src="image/logo-gh.svg" alt="gh"></a>
+        </div>
+        <!-- <div class="subfooter__active"> 
+          <a href="#"><img class="subfooter__items__active" src="image/logo-vk.svg" alt="vk"></a>
+          <a href="#"><img class="subfooter__items__active" src="image/logo-inst.svg" alt="inst"></a>
+          <a href="#"><img class="subfooter__items__active" src="image/logo-tw.svg" alt="tw"></a>
+          <a href="#"><img class="subfooter__items__active" src="image/logo-fc.svg" alt="fc"></a>
+          <a href="#"><img class="subfooter__items__active" src="image/logo-gh.svg" alt="gh"></a>
+        </div> -->
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- Connect JavaScript-->
+<script src="js/script.js"></script>
+<script src="js/slideout.js"></script>
+<script src='js/hashed.js'></script>

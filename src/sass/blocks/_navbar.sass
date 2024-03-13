@@ -1,0 +1,245 @@
+.header
+    .everything-header
+        background-color: $hero-bg
+        height: 70px
+        .logo
+            display: flex
+            margin-top: 9px
+            align-items: flex-end
+            &__title
+                color: $white
+                font-size: 1.125em
+                line-height: 22px
+                +ExtraBold
+            &__text
+                font-size: 0.75em
+                line-height: 15px
+                color: $white
+                +Light_Italick
+        .reg_auth
+            float: right
+            margin-top: 15px
+            .sign
+                margin-right: 10px
+                padding: 12px 18px
+                background-color: $white
+                color: $dark
+                font-size: 0.9375em
+                border-radius: 5px
+                +SemiBold
+                line-height: 20px 
+                    display: none
+                &-active
+            .reg
+                padding: 12px 10px
+                background-color: $red
+                color: $white
+                font-size: 0.9375em
+                border-radius: 5px
+                +SemiBold
+                line-height: 20px
+        .slider
+            display: none
+    .navbar
+        background-color: $white
+        width: 100%
+        height: 50px
+        border-bottom: 1px solid #D8D8D8
+        display: fixed
+        .hideMenu
+            display: flex
+            float: left
+            margin-top: 5px
+            &__items
+                color: $grey
+                font-size: 0.875
+                margin-left: 10px
+                padding: 10px 14px
+                transition: 0.2s
+                &:hover
+                    color: $hero-bg
+        .info
+            display: flex
+            float: right
+            margin-top: 5px
+                font-size: 14px
+            &__items
+                color: $grey
+                font-size: 0.875
+                margin-right: 10px
+                padding: 10px 14px
+                transition: 0.2s
+                &:hover
+                    color: $hero-bg
+
+
+// Adaptive navbar MAX-WIDTH 1199px
+@media screen and (max-width: 1199px) 
+    .header 
+        .navbar
+
+            .hideMenu
+                &__items
+                    font-size: 0.85em
+                    padding: 10px 12px
+            .info 
+                margin-top: -6px
+                &__items
+                font-size: 0.8750em
+                padding: 10px 14px
+                margin-right: 0px
+
+
+// Adaptive navbar MAX-WIDTH 991px
+@media screen and (max-width: 991px) 
+    .header
+        position: fixed
+        z-index: 1
+        width: 100%
+        top: 0
+        .navbar
+            display: none
+        .everything-header
+            .reg_auth
+                display: none
+            .slider
+                display: flex
+                img
+                    margin-top: 5px
+                &__button
+                    position: absolute
+                    right: 30px
+                    top: 15px
+                    z-index: 3
+                &-menu
+                    // display: none
+                    // overflow-x: -100%
+                    transform: translateX(100%)
+                    transition: 0.2s all
+                    position: absolute
+                    right: 0
+                    height: 550px
+                    top: 95%
+                    &-active
+                        margin-top: 50px
+                        display: block
+                        z-index: 4
+                        position: absolute
+                        right: 0
+                        top: 0
+                        height: 1000px
+                        overflow-y: hidden
+                        background-color: $hero-bg
+                        width: 32%
+                        transform: translateX(0%)
+                        border-height: 100%
+                        border-left: 2px solid #04AA6D
+                        &__items
+                            text-align: right
+                            display: flex
+                            a 
+                                padding: 20px 30px
+                                color: #fff
+                                width: 100%
+                                font-size: 0.85em
+                                transition: 0.2s
+                                line-height: 20px
+
+                                +Regular
+                                &:hover
+                                    background: #6A6A6A
+                        &_info
+                            &_title
+                                text-align: right
+                                padding: 0px 30px
+                                font-size: 0.8125em
+                                // margin-top: 20px
+                                margin: 20px 0px 10px 0px
+                                line-height: 15px
+
+                                color: $grey
+                                +Regular
+                        &_programs
+                            &_title
+                                text-align: right
+                                margin: 40px 0px 10px 0px
+                                font-size: 0.8125em
+                                padding: 0px 30px
+
+                                color: $grey
+                                +Regular
+//
+
+
+// Adaptive navbar MAX-WIDTH 769px
+@media screen and (max-width: 769px)
+    .header
+        .everything-header
+            .logo
+                margin-top: 15px
+                &__title
+                    font-size: 1.125em
+                    line-height: 20px
+                &__text
+                    font-size: 0.625em
+                img
+                    width: 45px
+                    margin-top: -5px
+                    height: 45px
+            .slider
+                &-menu
+                    &-active
+                        width: 42%
+        .navbar
+            display: none
+
+
+// Adaptive navbar MAX-WIDTH 540px
+@media screen and (max-width: 540px)
+    .header
+        height: 60px
+        .everything-header
+            .logo
+                margin-top: 15px
+                &__title
+                    font-size: 1.125em
+                    // line-height: 15px
+                &__text
+                    font-size: 0.625em
+                img
+                    display: none
+            .slider
+                &-menu
+                    &-active
+                        
+
+
+
+@media screen and (max-width: 448px)
+    .header
+        .everything-header
+            .logo
+                margin-top: 12px
+                &__title
+                    font-size: 1.125em
+                    line-height: 18px
+                &__text
+                    font-size: 0.5625em
+
+
+// Adaptive navbar MAX-WIDTH 381px
+@media screen and (max-width: 359px)
+    .header
+        height: 60px
+        .everything-header
+            .logo
+                margin-top: 15px
+                &__title
+                    font-size: 1em
+                    // margin-top: 15px
+                    line-height: 15px
+                &__text
+                    font-size: 0.625em
+                    line-height: 6px
+                img
+                    display: none
